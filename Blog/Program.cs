@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation(); // Enable runtime compilation for Razor pages
 
 builder.Services.AddDbContext<BlogDbContext>(options =>
 options.UseSqlServer(
